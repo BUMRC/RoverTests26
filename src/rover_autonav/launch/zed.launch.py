@@ -44,28 +44,8 @@ def generate_launch_description():
         }.items(),
     )
 
-    # Depth image to laser scan
-    depthimage_to_laserscan = Node(
-        package='depthimage_to_laserscan',
-        executable='depthimage_to_laserscan_node',
-        name='depthimage_to_laserscan',
-        remappings=[
-            ('depth', '/zed/zed_node/depth/depth_registered'),
-            ('depth_camera_info', '/zed/zed_node/depth/camera_info'),
-        ],
-        parameters=[{
-            'scan_height': 10,
-            'scan_time': 0.033,
-            'range_min': 0.3,
-            'range_max': 20.0,
-            'output_frame': 'base_link',
-        }],
-        output='screen',
-    )
-
     return LaunchDescription([
         robot_state_publisher,
         joint_state_publisher,
         zed_camera,
-        depthimage_to_laserscan,
     ])

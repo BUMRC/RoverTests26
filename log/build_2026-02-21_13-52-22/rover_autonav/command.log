@@ -1,0 +1,6 @@
+Invoking command in '/home/parallels/ros_ws/build/rover_autonav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/parallels/ros_ws/src/rover_autonav -DCMAKE_INSTALL_PREFIX=/home/parallels/ros_ws/install/rover_autonav
+Invoked command in '/home/parallels/ros_ws/build/rover_autonav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/parallels/ros_ws/src/rover_autonav -DCMAKE_INSTALL_PREFIX=/home/parallels/ros_ws/install/rover_autonav
+Invoking command in '/home/parallels/ros_ws/build/rover_autonav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/parallels/ros_ws/build/rover_autonav -- -j10 -l10
+Invoked command in '/home/parallels/ros_ws/build/rover_autonav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/parallels/ros_ws/build/rover_autonav -- -j10 -l10
+Invoking command in '/home/parallels/ros_ws/build/rover_autonav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/parallels/ros_ws/build/rover_autonav
+Invoked command in '/home/parallels/ros_ws/build/rover_autonav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/parallels/ros_ws/build/rover_autonav

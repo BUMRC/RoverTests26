@@ -1,0 +1,1 @@
+rclpy;nav2_bringup;navigation2;zed_wrapper;foxglove_bridge;robot_state_publisher;joint_state_publisher;xacro;tf2_ros;image_transport;compressed_image_transport;geometry_msgs;std_msgs

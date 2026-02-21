@@ -32,12 +32,12 @@ Connect Foxglove to `ws://<jetson-ip>:8765`. Click in the 3D panel to send navig
 ## Architecture
 
 ```
-ZED 2i (VIO + depth) → depthimage_to_laserscan → Nav2 (costmaps + planning) → /cmd_vel → Motor Driver
-                                                                                            ↓
-                                                  Foxglove Bridge ← all topics ← 6x motor nodes
+ZED 2i (VIO + PointCloud2) → Nav2 voxel costmaps (height-aware 2.5D) → /cmd_vel → Motor Driver
+                                                                                  ↓
+                                        Foxglove Bridge ← all topics ← 6x motor nodes
 ```
 
 - **Odometry:** ZED visual-inertial odometry (no wheel encoders needed)
 - **Planning:** Nav2 with NavFn planner + DWB differential drive controller
-- **Costmaps:** Rolling window, fed by virtual laser scan from ZED depth
+- **Costmaps:** Rolling window, fed by ZED point cloud through Nav2 voxel layers
 - **Visualization:** Foxglove bridge with topic whitelist (~15-25 Mbps)

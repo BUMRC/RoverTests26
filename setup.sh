@@ -28,7 +28,6 @@ sudo apt install -y \
     ros-humble-navigation2 \
     ros-humble-nav2-bringup \
     ros-humble-foxglove-bridge \
-    ros-humble-depthimage-to-laserscan \
     ros-humble-image-transport-plugins \
     ros-humble-robot-state-publisher \
     ros-humble-joint-state-publisher \

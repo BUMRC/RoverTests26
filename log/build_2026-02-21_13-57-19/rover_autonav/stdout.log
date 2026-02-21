@@ -1,0 +1,26 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/config/nav2_params.yaml
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/config/zed_config.yaml
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/description/rover.urdf.xacro
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/autonav.launch.py
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/foxglove.launch.py
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/motors.launch.py
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/nav2.launch.py
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/zed.launch.py
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/lib/rover_autonav/motor_driver.py
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/ament_index/resource_index/package_run_dependencies/rover_autonav
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/ament_index/resource_index/parent_prefix_path/rover_autonav
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/path.sh
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/path.dsv
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.bash
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.sh
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.zsh
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.dsv
+-- Symlinking: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/package.dsv
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/ament_index/resource_index/packages/rover_autonav
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/cmake/rover_autonavConfig.cmake
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/cmake/rover_autonavConfig-version.cmake
+-- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/package.xml
