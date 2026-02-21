@@ -45,18 +45,18 @@ controller_server:
     controller_plugins: ["FollowPath"]
 
     progress_checker:
-      plugin: "nav2_controller/SimpleProgressChecker"
+      plugin: "nav2_controller::SimpleProgressChecker"
       required_movement_radius: 0.5
       movement_time_allowance: 10.0
 
     goal_checker:
-      plugin: "nav2_controller/SimpleGoalChecker"
+      plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.30
       yaw_goal_tolerance: 0.25
       stateful: true
 
     FollowPath:
-      plugin: "dwb_core/DWBLocalPlanner"
+      plugin: "dwb_core::DWBLocalPlanner"
       min_vel_x: 0.0
       min_vel_y: 0.0
       max_vel_x: 0.5
@@ -141,7 +141,7 @@ global_costmap:
       footprint: "[[0.45, 0.35], [0.45, -0.35], [-0.45, -0.35], [-0.45, 0.35]]"
       plugins: ["obstacle_layer", "inflation_layer"]
       obstacle_layer:
-        plugin: "nav2_costmap_2d/ObstacleLayer"
+        plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: true
         observation_sources: scan
         scan:
@@ -155,7 +155,7 @@ global_costmap:
           obstacle_max_range: 8.0
           obstacle_min_range: 0.0
       inflation_layer:
-        plugin: "nav2_costmap_2d/InflationLayer"
+        plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
         inflation_radius: 0.6
       always_send_full_costmap: true
@@ -174,7 +174,7 @@ local_costmap:
       footprint: "[[0.45, 0.35], [0.45, -0.35], [-0.45, -0.35], [-0.45, 0.35]]"
       plugins: ["voxel_layer", "inflation_layer"]
       voxel_layer:
-        plugin: "nav2_costmap_2d/VoxelLayer"
+        plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: true
         publish_voxel_map: true
         origin_z: 0.0
@@ -194,7 +194,7 @@ local_costmap:
           obstacle_max_range: 4.5
           obstacle_min_range: 0.0
       inflation_layer:
-        plugin: "nav2_costmap_2d/InflationLayer"
+        plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
         inflation_radius: 0.6
       always_send_full_costmap: true
