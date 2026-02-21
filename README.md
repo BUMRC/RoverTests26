@@ -23,7 +23,7 @@ source install/setup.bash
 # Full launch (with motors)
 ros2 launch rover_autonav autonav.launch.py
 
-# Without motor driver (for testing nav stack only)
+# Without motor driver
 ros2 launch rover_autonav autonav.launch.py enable_motors:=false
 ```
 
