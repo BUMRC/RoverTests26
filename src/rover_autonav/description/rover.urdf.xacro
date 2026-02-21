@@ -138,4 +138,40 @@
     <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
   </joint>
 
+  <!-- Compatibility aliases for zed_wrapper frame naming variants -->
+  <link name="zed_base_link"/>
+  <joint name="zed_base_link_joint" type="fixed">
+    <parent link="zed_camera_link"/>
+    <child link="zed_base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_left_camera"/>
+  <joint name="zed_left_camera_alias_joint" type="fixed">
+    <parent link="zed_left_camera_frame"/>
+    <child link="zed_left_camera"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_left_camera_optical"/>
+  <joint name="zed_left_camera_optical_alias_joint" type="fixed">
+    <parent link="zed_left_camera_optical_frame"/>
+    <child link="zed_left_camera_optical"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_right_camera"/>
+  <joint name="zed_right_camera_alias_joint" type="fixed">
+    <parent link="zed_right_camera_frame"/>
+    <child link="zed_right_camera"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_right_camera_optical"/>
+  <joint name="zed_right_camera_optical_alias_joint" type="fixed">
+    <parent link="zed_right_camera_optical_frame"/>
+    <child link="zed_right_camera_optical"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
 </robot>
