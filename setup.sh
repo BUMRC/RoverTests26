@@ -36,7 +36,12 @@ sudo apt install -y \
     ros-humble-tf2-ros \
     ros-humble-tf2-tools \
     ros-humble-compressed-image-transport \
-    python3-colcon-common-extensions
+    python3-colcon-common-extensions \
+    python3-pip
+
+# Install Python dependencies for motor driver
+echo -e "${GREEN}[1.5/5] Installing Python dependencies...${NC}"
+pip3 install adafruit-circuitpython-pca9685 adafruit-extended-bus
 
 # Clone ZED ROS 2 wrapper
 echo -e "${GREEN}[2/5] Setting up ZED ROS 2 wrapper...${NC}"
