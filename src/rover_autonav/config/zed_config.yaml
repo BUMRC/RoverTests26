@@ -16,6 +16,7 @@
       depth_mode: 'NEURAL'
       depth_stabilization: 50
       point_cloud_freq: 5.0
+      publish_point_cloud: true
       min_depth: 0.3
       max_depth: 20.0
       depth_confidence: 50
@@ -23,7 +24,7 @@
 
     pos_tracking:
       pos_tracking_enabled: true
-      pos_tracking_mode: 'GEN_2'
+      pos_tracking_mode: 'GEN_3'
       imu_fusion: true
       publish_tf: true
       publish_map_tf: true

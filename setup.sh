@@ -21,6 +21,26 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
+prune_nonexistent_paths() {
+    local var_name="$1"
+    local current_value="${!var_name:-}"
+    local cleaned_value=""
+    local path_entry
+
+    if [ -z "$current_value" ]; then
+        return
+    fi
+
+    IFS=':' read -ra path_entries <<< "$current_value"
+    for path_entry in "${path_entries[@]}"; do
+        if [ -n "$path_entry" ] && [ -d "$path_entry" ]; then
+            cleaned_value="${cleaned_value:+$cleaned_value:}$path_entry"
+        fi
+    done
+
+    export "$var_name=$cleaned_value"
+}
+
 # Install apt dependencies
 echo -e "${GREEN}[1/5] Installing apt dependencies...${NC}"
 sudo apt update
@@ -64,6 +84,9 @@ rosdep install --from-paths src --ignore-src -r -y
 # Build
 echo -e "${GREEN}[4/5] Building workspace...${NC}"
 source /opt/ros/humble/setup.bash
+prune_nonexistent_paths AMENT_PREFIX_PATH
+prune_nonexistent_paths CMAKE_PREFIX_PATH
+prune_nonexistent_paths COLCON_PREFIX_PATH
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 # Source

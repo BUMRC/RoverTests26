@@ -1,0 +1,35 @@
+[0.005s] Invoking command in '/home/parallels/ros_ws/build/rover_autonav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/parallels/ros_ws/build/rover_autonav -- -j10 -l10
+[0.019s] Invoked command in '/home/parallels/ros_ws/build/rover_autonav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/parallels/ros_ws/build/rover_autonav -- -j10 -l10
+[30.017s] Invoking command in '/home/parallels/ros_ws/build/rover_autonav': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/parallels/ros_ws/build/rover_autonav
+[30.020s] -- Install configuration: ""
+[30.020s] -- Execute custom install script
+[30.021s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/config/nav2_params.yaml
+[30.021s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/config/zed_config.yaml
+[30.021s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/description/rover.urdf.xacro
+[30.021s] -- Symlinking: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/__pycache__/autonav.launch.cpython-310.pyc
+[30.025s] -- Symlinking: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/__pycache__/foxglove.launch.cpython-310.pyc
+[30.028s] -- Symlinking: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/__pycache__/motors.launch.cpython-310.pyc
+[30.032s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/__pycache__/nav2.launch.cpython-310.pyc
+[30.032s] -- Symlinking: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/__pycache__/zed.launch.cpython-310.pyc
+[30.036s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/autonav.launch.py
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/foxglove.launch.py
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/motors.launch.py
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/nav2.launch.py
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/launch/zed.launch.py
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/lib/rover_autonav/motor_driver.py
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/ament_index/resource_index/package_run_dependencies/rover_autonav
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/ament_index/resource_index/parent_prefix_path/rover_autonav
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/ament_prefix_path.sh
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/ament_prefix_path.dsv
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/path.sh
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/environment/path.dsv
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.bash
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.sh
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.zsh
+[30.037s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/local_setup.dsv
+[30.037s] -- Symlinking: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/package.dsv
+[30.041s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/ament_index/resource_index/packages/rover_autonav
+[30.041s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/cmake/rover_autonavConfig.cmake
+[30.041s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/cmake/rover_autonavConfig-version.cmake
+[30.041s] -- Up-to-date symlink: /home/parallels/ros_ws/install/rover_autonav/share/rover_autonav/package.xml
+[30.042s] Invoked command in '/home/parallels/ros_ws/build/rover_autonav' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/parallels/ros_ws/build/rover_autonav
