@@ -17,6 +17,11 @@
   <xacro:property name="camera_x" value="0.35"/>
   <xacro:property name="camera_z" value="0.45"/>
 
+  <!-- ZED2i geometry constants from zed_wrapper macro -->
+  <xacro:property name="zed_height" value="0.03"/>
+  <xacro:property name="zed_baseline" value="0.12"/>
+  <xacro:property name="zed_optical_offset_x" value="-0.01"/>
+
   <!-- Base footprint (ground plane projection) -->
   <link name="base_footprint"/>
 
@@ -95,6 +100,42 @@
     <parent link="base_link"/>
     <child link="zed_camera_link"/>
     <origin xyz="${camera_x} 0 ${camera_z}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ZED frame chain required by zed_wrapper positional tracking -->
+  <link name="zed_camera_center"/>
+  <joint name="zed_camera_center_joint" type="fixed">
+    <parent link="zed_camera_link"/>
+    <child link="zed_camera_center"/>
+    <origin xyz="0 0 ${zed_height/2}" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_left_camera_frame"/>
+  <joint name="zed_left_camera_joint" type="fixed">
+    <parent link="zed_camera_center"/>
+    <child link="zed_left_camera_frame"/>
+    <origin xyz="${zed_optical_offset_x} ${zed_baseline/2} 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_left_camera_optical_frame"/>
+  <joint name="zed_left_camera_optical_joint" type="fixed">
+    <parent link="zed_left_camera_frame"/>
+    <child link="zed_left_camera_optical_frame"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+  </joint>
+
+  <link name="zed_right_camera_frame"/>
+  <joint name="zed_right_camera_joint" type="fixed">
+    <parent link="zed_camera_center"/>
+    <child link="zed_right_camera_frame"/>
+    <origin xyz="${zed_optical_offset_x} ${-zed_baseline/2} 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="zed_right_camera_optical_frame"/>
+  <joint name="zed_right_camera_optical_joint" type="fixed">
+    <parent link="zed_right_camera_frame"/>
+    <child link="zed_right_camera_optical_frame"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
   </joint>
 
 </robot>
