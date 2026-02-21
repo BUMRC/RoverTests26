@@ -30,7 +30,9 @@
       publish_map_tf: true
       map_frame: 'map'
       odometry_frame: 'odom'
-      base_frame: 'base_link'
+      # Keep odometry anchored to the camera frame and let URDF provide
+      # the fixed transform to base_link. This avoids startup/frame-name races.
+      base_frame: 'zed_camera_link'
       area_memory: true
       floor_alignment: false
       set_gravity_as_origin: true

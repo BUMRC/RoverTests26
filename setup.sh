@@ -56,11 +56,12 @@ sudo apt install -y \
     ros-humble-tf2-tools \
     ros-humble-compressed-image-transport \
     python3-colcon-common-extensions \
-    python3-pip
+    python3-pip \
+    python3-numpy
 
 # Install Python dependencies for motor driver
 echo -e "${GREEN}[1.5/5] Installing Python dependencies...${NC}"
-pip3 install adafruit-circuitpython-pca9685 adafruit-extended-bus
+python3 -m pip install --user adafruit-circuitpython-pca9685 adafruit-extended-bus
 
 # Clone ZED ROS 2 wrapper
 echo -e "${GREEN}[2/5] Setting up ZED ROS 2 wrapper...${NC}"
@@ -70,6 +71,15 @@ if [ ! -d "src/zed-ros2-wrapper" ]; then
     cd ..
 else
     echo "zed-ros2-wrapper already exists, skipping clone"
+fi
+
+# Optional pin for deterministic SDK/wrapper compatibility
+if [ -n "${ZED_ROS2_WRAPPER_REF:-}" ]; then
+    echo "Pinning zed-ros2-wrapper to ${ZED_ROS2_WRAPPER_REF}"
+    git -C src/zed-ros2-wrapper fetch --tags
+    git -C src/zed-ros2-wrapper checkout "${ZED_ROS2_WRAPPER_REF}"
+else
+    echo -e "${YELLOW}Warning: ZED_ROS2_WRAPPER_REF is not set; using current zed-ros2-wrapper checkout.${NC}"
 fi
 
 # Install rosdep dependencies
@@ -87,7 +97,7 @@ source /opt/ros/humble/setup.bash
 prune_nonexistent_paths AMENT_PREFIX_PATH
 prune_nonexistent_paths CMAKE_PREFIX_PATH
 prune_nonexistent_paths COLCON_PREFIX_PATH
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+colcon build --symlink-install --cmake-clean-cache --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 # Source
 echo -e "${GREEN}[5/5] Setup complete!${NC}"

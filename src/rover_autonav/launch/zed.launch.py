@@ -1,7 +1,7 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 import xacro
@@ -47,8 +47,14 @@ def generate_launch_description():
         }.items(),
     )
 
+    # Give robot_state_publisher time to publish static TFs before ZED starts
+    zed_camera_delayed = TimerAction(
+        period=2.0,
+        actions=[zed_camera],
+    )
+
     return LaunchDescription([
         robot_state_publisher,
         joint_state_publisher,
-        zed_camera,
+        zed_camera_delayed,
     ])
