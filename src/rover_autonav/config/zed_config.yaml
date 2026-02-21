@@ -1,0 +1,42 @@
+/**:
+  ros__parameters:
+    general:
+      camera_name: 'zed'
+      pub_resolution: 'CUSTOM'
+      pub_downscale_factor: 2.0
+      pub_frame_rate: 15.0
+      grab_resolution: 'HD720'
+      grab_frame_rate: 30
+
+    video:
+      auto_exposure_gain: true
+      publish_rgb: true
+
+    depth:
+      depth_mode: 'NEURAL'
+      depth_stabilization: 50
+      point_cloud_freq: 5.0
+      min_depth: 0.3
+      max_depth: 20.0
+      depth_confidence: 50
+      depth_texture_conf: 100
+
+    pos_tracking:
+      pos_tracking_enabled: true
+      pos_tracking_mode: 'GEN_2'
+      imu_fusion: true
+      publish_tf: true
+      publish_map_tf: true
+      map_frame: 'map'
+      odometry_frame: 'odom'
+      base_frame: 'base_link'
+      area_memory: true
+      floor_alignment: false
+      set_gravity_as_origin: true
+      path_pub_rate: 2.0
+
+    mapping:
+      mapping_enabled: false
+
+    object_detection:
+      od_enabled: false
