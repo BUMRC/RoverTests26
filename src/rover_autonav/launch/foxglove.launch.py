@@ -4,12 +4,17 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     topic_whitelist = [
-        '/zed/zed_node/rgb/image_rect_color/compressed',
+        '/zed/zed_node/rgb/color/rect/image',
+        '/zed/zed_node/rgb/color/rect/image/compressed',
+        '/zed/zed_node/rgb/color/rect/camera_info',
         '/zed/zed_node/depth/depth_registered',
+        '/zed/zed_node/depth/depth_registered/compressedDepth',
         '/zed/zed_node/depth/camera_info',
         '/zed/zed_node/odom',
         '/zed/zed_node/path_odom',
         '/zed/zed_node/pose',
+        '/zed/zed_node/point_cloud/cloud_registered',
+        '/zed/zed_node/imu/data',
         '/scan',
         '/local_costmap/costmap',
         '/local_costmap/published_footprint',
