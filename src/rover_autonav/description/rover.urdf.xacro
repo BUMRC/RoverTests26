@@ -80,7 +80,7 @@
   <xacro:wheel name="right_wheel_rear"  x="${wheelbase_rear}"    y="${-track_width/2}"/>
 
   <!-- ZED 2i camera mount point -->
-  <link name="zed2i_camera_link">
+  <link name="zed_camera_link">
     <visual>
       <geometry>
         <box size="0.175 0.03 0.033"/>
@@ -91,9 +91,9 @@
     </visual>
   </link>
 
-  <joint name="zed2i_camera_joint" type="fixed">
+  <joint name="zed_camera_joint" type="fixed">
     <parent link="base_link"/>
-    <child link="zed2i_camera_link"/>
+    <child link="zed_camera_link"/>
     <origin xyz="${camera_x} 0 ${camera_z}" rpy="0 0 0"/>
   </joint>
 
