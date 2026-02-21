@@ -1,1 +1,0 @@
-/home/parallels/ros_ws/build/rover_autonav/ament_cmake_core/rover_autonavConfig.cmake

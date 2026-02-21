@@ -1,1 +1,0 @@
-/home/parallels/ros_ws/src/rover_autonav/launch/nav2.launch.py

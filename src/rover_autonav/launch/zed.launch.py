@@ -39,6 +39,9 @@ def generate_launch_description():
         ),
         launch_arguments={
             'camera_model': 'zed2i',
+            'camera_name': 'zed',
+            'publish_tf': 'true',
+            'publish_map_tf': 'true',
             'publish_urdf': 'false',
             'ros_params_override_path': zed_config,
         }.items(),
